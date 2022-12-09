@@ -1,13 +1,11 @@
-const itemAllEl = document.querySelectorAll(`.item`);
-console.log(itemAllEl);
+const itemsEl = document.querySelectorAll(`.item`);
+console.log(`Number of categories: ${itemsEl.length}`);
 
-console.log(`Number of categories: ${itemAllEl.length}`);
+itemsEl.forEach(function (item) {
+  const itemFirstEl = item.firstElementChild.textContent;
+  const itemLastEl = item.lastElementChild;
+  const childrenEl = itemLastEl.children.length;
 
-const items = [];
-
-for (let i = 0; i < itemAllEl.length; i += 1) {
-    const item = itemAllEl[i];
-    items.push(i);
-}
-
-console.log(items);
+  console.log(`Category: ${itemFirstEl}`);
+  console.log(`Elements: ${childrenEl}`);
+});
