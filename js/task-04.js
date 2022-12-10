@@ -3,19 +3,19 @@ const valueEl = document.querySelector(`#value`);
 const decrBtn = counterEl.firstElementChild;
 const incrBtn = counterEl.lastElementChild;
 
-let value = 0;
+let counterValue = 0;
 
 decrBtn.addEventListener(`click`, onDecrBtnClick);
 incrBtn.addEventListener(`click`, onIncrBtnClick);
 
 function onDecrBtnClick(event) {
-  value -= 1;
-  valueEl.textContent = value;
+  counterValue -= 1;
+  valueEl.textContent = counterValue;
   console.log(value);
 }
 
 function onIncrBtnClick(event) {
-  value += 1;
-  valueEl.textContent = value;
+  counterValue += 1;
+  valueEl.textContent = counterValue;
   console.log(value);
 }
