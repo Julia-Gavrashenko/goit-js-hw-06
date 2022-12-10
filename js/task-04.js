@@ -11,11 +11,11 @@ incrBtn.addEventListener(`click`, onIncrBtnClick);
 function onDecrBtnClick(event) {
   counterValue -= 1;
   valueEl.textContent = counterValue;
-  console.log(value);
+  console.log(counterValue);
 }
 
 function onIncrBtnClick(event) {
   counterValue += 1;
   valueEl.textContent = counterValue;
-  console.log(value);
+  console.log(counterValue);
 }
