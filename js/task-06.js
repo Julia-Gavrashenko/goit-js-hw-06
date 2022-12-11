@@ -1,17 +1,14 @@
-const inputEl = document.querySelector(`#validation-input`)
+const inputEl = document.querySelector(`#validation-input`);
 
-console.log(inputEl);
-console.log(inputEl.placeholder);
+const symbols = inputEl.getAttribute(`data-length`);
 
 inputEl.addEventListener(`blur`, onInputBlur);
 
-
 function onInputBlur() {
-    
-    if (inputEl.data-length === 6) {
-       return inputEl.classList.add(`#validation-input.valid`) 
-    }
-    
-
-
+  if (inputEl.value.length === Number(symbols)) {
+    inputEl.classList.add(`valid`);
+  } else {
+    inputEl.classList.remove(`valid`);
+    inputEl.classList.add(`invalid`);
+  }
 }
