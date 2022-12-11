@@ -1,8 +1,24 @@
 const form = document.querySelector(`.login-form`);
 
-// console.log(form);
+form.addEventListener(`submit`, onFormSubmit);
 
-form.addEventListener(`submit`, onFormSubmit)
 function onFormSubmit(event) {
-    console.log(event.currentTarget)
+  event.preventDefault();
+
+  const elements = event.currentTarget.elements;
+  const email = elements.email.value;
+  const password = elements.password.value;
+
+  if (email === `` || password === ``) {
+    const message = alert`Enter your data`;
+  }
+
+  const formData = {
+    email,
+    password,
+  };
+
+  event.currentTarget.reset();
+
+  console.log(formData);
 }
