@@ -6,6 +6,7 @@ inputEl.addEventListener(`blur`, onInputBlur);
 
 function onInputBlur() {
   if (inputEl.value.length === Number(symbols)) {
+    inputEl.classList.remove(`invalid`);
     inputEl.classList.add(`valid`);
   } else {
     inputEl.classList.remove(`valid`);
